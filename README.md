@@ -9,6 +9,8 @@ These projects are designed to help new programmers grasp fundamental concepts w
    A simple number guessing game where the user tries to guess a randomly generated number within a specified range.
 3. **Student Grade Calculator:**
    Calculates and displays the average grade of students based on their individual scores.
+4. **URL Detection:**
+   This Java program takes a URL as input and categorizes it based on its top-level domain (TLD) into predefined categories.
 
 **How to Use:**
 1. Clone the repository to your local machine.
