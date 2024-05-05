@@ -1,0 +1,49 @@
+import java.net.URI;
+import java.util.Scanner;
+
+public class Url {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a URL:");
+        String urlString = sc.nextLine();
+
+        try {
+            if (!urlString.contains("://")) {
+                urlString = "http://" + urlString;
+            }
+            
+            URI url = new URI(urlString); // Create a URL object from the input string
+            String host = url.getHost(); // Get the host part of the URL
+            String end = host.substring(host.lastIndexOf('.') + 1);
+
+            switch (end.toLowerCase()) {
+                case "edu":
+                    System.out.println("Education");
+                    break;
+                case "com":
+                    System.out.println("Commercial");
+                    break;
+                case "org":
+                    System.out.println("Organization");
+                    break;
+                case "in":
+                    System.out.println("India");
+                    break;
+                case "net":
+                    System.out.println("Network");
+                    break;
+                case "gov":
+                    System.out.println("Government");
+                    break;
+                case "info":
+                    System.out.println("Information");
+                    break;
+                default:
+                    System.out.println("Unknown");
+                    break;
+            }
+        } catch (Exception e) {
+            System.out.println("Invalid URL");
+        }
+    }
+}
